@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./view/style.css"/>
+    <title>LangVoice</title>
+    <link rel="stylesheet" href="tools/bootstrap.min.css">
+    <script src="tools/jquery.min.js"></script>
+    <script src="tools/bootstrap.min.js"></script>
+    <script src="tools/icons.js"></script>
+    <script src="./tools/translate.min.js"></script>
+    <link rel="icon" type="imagem/png" href="img/logositeingles.png" />
+  </head>
+  <body>
+    <div class="">
+      <header id="titulo">
+        <div id="headTitle" class="row">
+            <div class="col-sm-3 inline">
+                <a href="/" class="inline center menuTitulo">
+                    <img class="inline" id="icon" src="img/logositeingles.png" />
+                    <span class="inline">LangVoice</span>
+                <!--<span>Crie suas próprias frases para decorar como quiser.</span>-->
+                </a>
+            </div>
+            <div class="col-sm-7 inline">
+                <a href="/" class="inline center menuSelect typeHome"><i class="fas fa-home"></i><span>Home</span></a>
+                <a href="/phases.html" class="inline center menuSelect typePhases"><i class="fas fa-play"></i><span>Phases</span></a>
+                <a href="/insertion.html" class="inline center menuSelect typeInsert"><i class="fas fa-list"></i><span>Insertion</span></a>
+                <a href="/auto.html" class="inline center menuSelect typeAuto"><i class="fas fa-book-open"></i><span>Notebook</span></a>
+            </div>
+            <div class="col-sm-2 inline">
+                <a href="/login.html" class="inline center menuLogin"><i class="fas fa-sign-out-alt"></i><span>Log out</span></a>
+            </div>
+        </div>
+      </header>
+      <article>
+            <fieldset class="phasesDiv">
+                <legend>Phases</legend>
+                <section id="idioma">
+                    <label for="selectIdioma" class="inline">Selecione o idioma que deseje ouvir:</label>
+                    <br>
+                    <select class="inline" id="selectIdioma">
+                        <option value="Microsoft Daniel - Portuguese (Brazil)" lang="pt-BR">pt-BR - Microsoft Daniel - Portug (Brazil)</option>
+                        <option value="Google US English" lang="en-US" selected>en-US - Google US English</option>
+                        <option value="Google español" lang="es-ES">es-ES - Google español</option>
+                    </select>
+                    <input type="hidden" id="lang" value="en-us">
+                    <br>
+                    <label for="selectMatter" class="inline">Selecione as modalidades:</label>
+                    <br>
+                    <select name="selectMatter" id="selectMatter" class="inline" multiple></select>
+                    <br>
+                    <label for="" class="inline">Modo automático:</label>
+                    <br>
+                    <i class="fa fa-play-circle inline" title="play" onclick="autoPlay()" id="autoPlay" style="color: #5cb85c;" aria-hidden="true"></i>
+                    <input type="checkbox" id="traduz">
+                    <label for="traduz" class="label500">Traduzir?</label>
+                    <input type="checkbox" id="repetir">
+                    <label for="repetir" class="label500">Repetir?</label>
+                </section>
+                <hr>
+                <section id="allPhases">
+                    <main></main>
+                </section>
+            </fieldset>
+      </article>
+      <footer>
+        <p></p>
+        <input type="hidden" id="traducaoAtual">
+      </footer>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
